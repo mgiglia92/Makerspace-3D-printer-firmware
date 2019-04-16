@@ -98,8 +98,8 @@
  * Thermal Protection parameters for the bed are just as above for hotends.
  */
 #if ENABLED(THERMAL_PROTECTION_BED)
-  #define THERMAL_PROTECTION_BED_PERIOD 20    // Seconds
-  #define THERMAL_PROTECTION_BED_HYSTERESIS 2 // Degrees Celsius
+  #define THERMAL_PROTECTION_BED_PERIOD 40    // Seconds (I have increased this because the bed is being set up to 195c, and at this temperature with bang-bang control, the losses to the air are enough to trigger the thermal runaway error
+  #define THERMAL_PROTECTION_BED_HYSTERESIS 8 // Degrees Celsius (same here, i have let the hysteresis increase from 2 to 8, to allow for dramatic differences in temp due to the losses to the air, and the thick aluminum plate
 
   /**
    * As described above, except for the bed (M140/M190/M303).
